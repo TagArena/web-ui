@@ -1,0 +1,10 @@
+<div>
+  <div>
+    <input #trainerCountInput type="number" min="0">
+    <button (click)="createTrainers(Number(trainerCountInput.value))">Create Trainers</button>
+  </div>
+
+  @for (createdTrainer of createdTrainers; track createdTrainer.id) {
+    <created-trainer [trainer]="createdTrainer"></created-trainer>
+  }
+</div>
