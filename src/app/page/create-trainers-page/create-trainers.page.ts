@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-create-trainers.page',
   imports: [],
   templateUrl: './create-trainers.page.html',
+  standalone: true,
   styleUrl: './create-trainers.page.css'
 })
 export class CreateTrainersPage {
