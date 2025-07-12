@@ -15,18 +15,29 @@ on:
 
 jobs:
   deploy:
-    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
         name: Check out code
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '24'  # or whichever node version you use
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Angular app
+        run: npm run build -- --configuration production  # or your build command
+
       - name: Build & push Docker image
         uses: mr-smithers-excellent/docker-build-push@v5
         with:
-          image: ${{ github.event.repository.name }}
+          image: ghcr.io/${{ github.repository_owner }}/web-ui
           tags: nightly
           registry: ghcr.io
           dockerfile: NightlyDockerfile
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
+
