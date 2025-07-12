@@ -38,3 +38,6 @@ jobs:
           tags: nightly
           registry: ghcr.io
           dockerfile: NightlyDockerfile
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
