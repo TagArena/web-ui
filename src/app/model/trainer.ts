@@ -1,5 +1,5 @@
 export interface Trainer {
   id: number;
   name: string;
-  creatureId: number;
+  creatureId: number | null;
 }

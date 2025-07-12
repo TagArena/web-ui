@@ -1,0 +1,18 @@
+.trainerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  background: antiquewhite;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.downloadButton {
+  padding: 0;
+}
+
+.downloadUrl {
+  padding: 0 2px;
+}

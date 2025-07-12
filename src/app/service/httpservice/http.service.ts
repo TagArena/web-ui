@@ -12,32 +12,32 @@ export class HttpService {
 
   constructor(private httpClient: HttpClient) {
     this.domain = environment.baseDomain + "/api/";
-    this.prefix = environment.httpProtocol + "://" + environment.servicePrefix +".";
+    this.prefix = environment.httpProtocol + "://";
   }
 
   public sendPostRequest(service: string, path: string, body: any): Observable<any> {
-    let url = this.prefix + service + this.domain + path;
+    let url = this.prefix + service + "." + environment.servicePrefix + "." + this.domain + path;
     console.log("Calling url: " + url)
     return this.httpClient.post(url, body)
   }
 
   public sendGetCollectionRequest(service: string, path: string,): Observable<any> {
-    let url = this.prefix + service + this.domain + path;
+    let url = this.prefix + service + "." + environment.servicePrefix + "." + this.domain + path
     return this.httpClient.get(url)
   }
 
   sendGetRequest(service: string, path: string, id: string): Observable<any> {
-    let url = this.prefix + service + this.domain + path + "/" + id;
+    let url = this.prefix + service + "." + environment.servicePrefix + "." + this.domain + path
     return this.httpClient.get(url)
   }
 
   public sendPutRequest(service: string, path: string, body: string): Observable<any> {
-    let url = this.prefix + service + this.domain + path;
-    return this.httpClient.put(url,body)
+    let url = this.prefix + service + "." + environment.servicePrefix + "." + this.domain + path
+    return this.httpClient.put(url, body)
   }
 
   public sendDeleteRequest(service: string, path: string): Observable<any> {
-    let url = this.prefix + service + this.domain + path;
+    let url = this.prefix + service + "." + environment.servicePrefix + "." + this.domain + path
     return this.httpClient.delete(url)
   }
 

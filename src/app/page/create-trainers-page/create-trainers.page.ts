@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
-import {CreateTrainerComponent} from "../../component/trainer-creator/create-trainer/create-trainer.component";
+import {Component} from '@angular/core';
+import {TrainerCreator} from '../../component/trainer-creation/trainer-creator/trainer-creator';
 
 @Component({
   selector: 'app-create-trainers.page',
-  imports: [CreateTrainerComponent],
+  imports: [TrainerCreator],
   templateUrl: './create-trainers.page.html',
   standalone: true,
   styleUrl: './create-trainers.page.css'
