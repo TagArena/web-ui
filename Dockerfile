@@ -12,6 +12,6 @@ RUN npm run buildProd
 # Pull nginx for angular hosting
 FROM nginx:alpine
 # Copy angular target folder (dist) into the static hosting path of nginx
-COPY --from=node /app/dist/frontend/browser /usr/share/nginx/html
+COPY --from=node /app/dist/tagarena-webui/browser /usr/share/nginx/html
 # Copy nginx config into correct folder
 COPY nginx.conf /etc/nginx/conf.d/default.conf
