@@ -29,7 +29,7 @@ jobs:
         run: npm install
 
       - name: Build Angular app
-        run: build:ngssc
+        run: ng run build:ngssc
 
       - name: Build & push Docker image
         uses: mr-smithers-excellent/docker-build-push@v5
