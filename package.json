@@ -1,6 +1,4 @@
 {
-  "name": "untitled",
-  "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -9,8 +7,11 @@
     "buildDev": "ng build --configuration development",
     "buildProd": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "build:ngssc": "ng run tagarena-webui:ngsscbuild:production"
   },
+  "name": "tagarena-webui",
+  "version": "0.0.0",
   "private": true,
   "dependencies": {
     "@angular/common": "^20.0.0",
@@ -19,6 +20,7 @@
     "@angular/forms": "^20.0.0",
     "@angular/platform-browser": "^20.0.0",
     "@angular/router": "^20.0.0",
+    "angular-server-side-configuration": "^20.0.0",
     "angularx-qrcode": "^20.0.0",
     "file-saver": "^2.0.5",
     "jszip": "^3.10.1",

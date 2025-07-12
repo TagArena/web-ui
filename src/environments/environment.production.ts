@@ -1,5 +1,5 @@
 export const environment = {
-  baseDomain: "roboter5123.com",
-  httpProtocol: "https",
-  servicePrefix: ""
+  baseDomain: process.env['baseDomain'] ?? '',
+  httpProtocol: process.env['httpProtocol'] ?? '',
+  servicePrefix: process.env['servicePrefix'] ?? ''
 };

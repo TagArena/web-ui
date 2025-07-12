@@ -73,13 +73,13 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "untitled:build:production"
+              "buildTarget": "tagarena-webui:build:production"
             },
             "development": {
-              "buildTarget": "untitled:build:development"
+              "buildTarget": "tagarena-webui:build:development"
             },
             "local": {
-              "buildTarget": "untitled:build:local"
+              "buildTarget": "tagarena-webui:build:local"
             }
           },
           "defaultConfiguration": "development"
@@ -104,6 +104,22 @@
             "styles": [
               "src/styles.css"
             ]
+          }
+        },
+        "ngsscbuild": {
+          "builder": "angular-server-side-configuration:ngsscbuild",
+          "options": {
+            "additionalEnvironmentVariables": [
+              "baseDomain",
+              "httpProtocol",
+              "servicePrefix"
+            ],
+            "buildTarget": "tagarena-webui:build"
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "tagarena-webui:build:production"
+            }
           }
         }
       }
