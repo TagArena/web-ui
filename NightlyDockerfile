@@ -9,5 +9,6 @@ COPY ngssc.sh /docker-entrypoint.d/ngssc.sh
 RUN chmod +x /docker-entrypoint.d/ngssc.sh
 
 # Copy app
-COPY /dist /usr/share/nginx/html
+COPY /dist/tagarena-webui/browser /usr/share/nginx/html
+COPY /dist/ngssc.json /usr/share/nginx/html/ngssc.json
 COPY nginx.conf /etc/nginx/conf.d/default.conf
