@@ -24,7 +24,7 @@ export class CreatedTrainer implements OnInit {
   }
 
   ngOnInit(): void {
-    this.trainerUrl = environment.httpProtocol + "://" + window.location.hostname + "/trainer/" + this.trainer().id;
+    this.trainerUrl = environment.httpProtocol + "://" + window.location.hostname + "/trainers/" + this.trainer().id;
   }
 
   onChangeURL(url: SafeUrl): void {

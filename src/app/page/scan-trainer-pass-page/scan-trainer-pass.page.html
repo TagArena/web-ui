@@ -1,4 +1,4 @@
-<app-trainer-pass-scanner (trainerIdEmitter)="handleTrainerIdScan($event)"></app-trainer-pass-scanner>
-@if(trainerId != null){
-  <div>Trainer id is = {{trainerId}}</div>
+<app-trainer-pass-scanner (trainerEmitter)="handleTrainerScan($event)"></app-trainer-pass-scanner>
+@if(trainer != undefined){
+  <div>Trainer is = {{JSON.stringify(trainer)}}</div>
 }

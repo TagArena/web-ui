@@ -6,7 +6,7 @@ import {environment} from '../../../environments/environment'
 @Injectable({
   providedIn: 'root'
 })
-export class HttpService {
+export class RestHttpService {
   private readonly domain: string;
   private readonly prefix: string;
 
@@ -23,21 +23,25 @@ export class HttpService {
 
   public sendGetCollectionRequest(service: string, path: string,): Observable<any> {
     let url = this.prefix + service + "." + environment.servicePrefix + "." + this.domain + path
+    console.log("Calling url: " + url)
     return this.httpClient.get(url)
   }
 
   sendGetRequest(service: string, path: string, id: string): Observable<any> {
-    let url = this.prefix + service + "." + environment.servicePrefix + "." + this.domain + path
+    let url = this.prefix + service + "." + environment.servicePrefix + "." + this.domain + path + "/" + id
+    console.log("Calling url: " + url)
     return this.httpClient.get(url)
   }
 
   public sendPutRequest(service: string, path: string, body: string): Observable<any> {
     let url = this.prefix + service + "." + environment.servicePrefix + "." + this.domain + path
+    console.log("Calling url: " + url)
     return this.httpClient.put(url, body)
   }
 
   public sendDeleteRequest(service: string, path: string): Observable<any> {
     let url = this.prefix + service + "." + environment.servicePrefix + "." + this.domain + path
+    console.log("Calling url: " + url)
     return this.httpClient.delete(url)
   }
 

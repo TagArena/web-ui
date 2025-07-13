@@ -1,5 +1,5 @@
 import {inject, Injectable} from '@angular/core';
-import {HttpService} from '../httpservice/http.service';
+import {RestHttpService} from '../httpservice/rest-http.service';
 import {Observable} from 'rxjs';
 import {Trainer} from '../../model/trainer';
 
@@ -7,7 +7,7 @@ import {Trainer} from '../../model/trainer';
   providedIn: 'root'
 })
 export class TrainerService {
-  private httpService = inject(HttpService);
+  private httpService = inject(RestHttpService);
 
   constructor() {
   }
@@ -16,7 +16,7 @@ export class TrainerService {
     return this.httpService.sendPostRequest('trainer', 'trainers',null);
   }
 
-  getTrainer(trainerId: string): Observable<Trainer> {
-    return this.httpService.sendGetRequest('trainer', 'trainers', trainerId);
+  getTrainer(trainerId: number): Observable<Trainer> {
+    return this.httpService.sendGetRequest('trainer', 'trainers', String(trainerId));
   }
 }

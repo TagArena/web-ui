@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {TrainerPassScanner} from '../../component/trainer-creation/trainer-pass-scanner/trainer-pass-scanner';
+import {Trainer} from '../../model/trainer';
 
 @Component({
   selector: 'app-scan-trainer-pass.page',
@@ -11,10 +12,12 @@ import {TrainerPassScanner} from '../../component/trainer-creation/trainer-pass-
   styleUrl: './scan-trainer-pass.page.css'
 })
 export class ScanTrainerPassPage {
-  protected trainerId!: number;
+  protected trainer : Trainer | undefined;
 
 
-  handleTrainerIdScan(trainerId: number) {
-    this.trainerId = trainerId
+  handleTrainerScan(trainer: Trainer) {
+    this.trainer = trainer
   }
+
+  protected readonly JSON = JSON;
 }
