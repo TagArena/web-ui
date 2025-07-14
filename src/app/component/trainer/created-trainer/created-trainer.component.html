@@ -1,0 +1,11 @@
+<div class="trainerContainer">
+  <qrcode (qrCodeURL)="onChangeURL($event)" [qrdata]="trainerUrl" [width]="148" [errorCorrectionLevel]="'M'"
+          elementType="svg"></qrcode>
+  <div>
+    <div><b>TrainerId: </b>{{ this.trainer().id }}</div>
+    <div><b>TrainerName: </b>{{ this.trainer().name }}</div>
+  </div>
+  <button class="downloadButton"><a class="downloadUrl" [href]="qrCodeDownloadUrl"
+                                    download="{{'trainer_' + this.trainer().id}}">Download</a></button>
+
+</div>

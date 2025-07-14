@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {TrainerCreator} from '../../component/trainer-creation/trainer-creator/trainer-creator';
+import {TrainerCreator} from '../../component/trainer/trainer-creator/trainer-creator';
 
 @Component({
   selector: 'app-create-trainers.page',

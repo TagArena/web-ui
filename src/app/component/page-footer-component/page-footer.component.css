@@ -1,0 +1,5 @@
+footer{
+  min-height: 200px;
+  background: var(--tertiary-color);
+  border-top: var(--secondary-color) solid 1px;
+}

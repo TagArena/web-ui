@@ -1,0 +1,20 @@
+header{
+  background: var(--tertiary-color);
+  border-bottom: var(--secondary-color) solid 1px;
+  margin-bottom: 10px;
+}
+
+.headerLink{
+  cursor: pointer;
+}
+
+menu{
+  display: flex;
+  width: 100%;
+  margin: 0;
+}
+
+menu > li {
+  list-style: none;
+  padding: 10px
+}

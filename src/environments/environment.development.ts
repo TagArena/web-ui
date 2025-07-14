@@ -1,5 +1,6 @@
 export const environment = {
   baseDomain: "",
   httpProtocol: "",
-  servicePrefix: ""
+  servicePrefix: "",
+  adminPassword: "1234"
 };

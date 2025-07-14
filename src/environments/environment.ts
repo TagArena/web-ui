@@ -19,5 +19,6 @@ import 'angular-server-side-configuration/process';
 export const environment = {
   baseDomain: "",
   httpProtocol: "",
-  servicePrefix: ""
+  servicePrefix: "",
+  adminPassword: ""
 };

@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {TrainerPassScanner} from '../../component/trainer-creation/trainer-pass-scanner/trainer-pass-scanner';
+import {TrainerPassScanner} from '../../component/trainer/trainer-pass-scanner/trainer-pass-scanner';
 import {Trainer} from '../../model/trainer';
 
 @Component({
@@ -12,7 +12,7 @@ import {Trainer} from '../../model/trainer';
   styleUrl: './scan-trainer-pass.page.css'
 })
 export class ScanTrainerPassPage {
-  protected trainer : Trainer | undefined;
+  protected trainer: Trainer | undefined;
 
 
   handleTrainerScan(trainer: Trainer) {

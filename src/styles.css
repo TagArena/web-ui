@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary-color: #77BEF0;
+  --secondary-color: #FFCB61;
+  --tertiary-color: #FF894F;
+  --accent-color: #EA5B6F;
+  --text-color: #000;
+}
+
+*{
+  box-sizing: border-box;
+  color: var(--text-color);
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--primary-color);
+}
+
+.page{
+  flex-grow: 1;
+}
+
