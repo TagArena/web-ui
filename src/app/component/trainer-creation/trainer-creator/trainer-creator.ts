@@ -26,11 +26,9 @@ export class TrainerCreator {
 
   createTrainers(trainerCount: number) {
     this.createdTrainers = []
-    for (let i = 0; i < trainerCount; i++) {
-      this.trainerService.createTrainer().subscribe(trainer => {
-        this.createdTrainers.push(trainer);
-      });
-    }
+    this.trainerService.createTrainers(trainerCount).subscribe(trainers => {
+      this.createdTrainers = trainers
+    });
   }
 
   handleQrCodeDownloadUrl(url: SafeUrl) {

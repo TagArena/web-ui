@@ -12,8 +12,9 @@ export class TrainerService {
   constructor() {
   }
 
-  createTrainer(): Observable<Trainer> {
-    return this.httpService.sendPostRequest('trainer', 'trainers',null);
+  createTrainers(amount: number): Observable<Trainer[]> {
+    const trainerCreation = {"amount": amount}
+    return this.httpService.sendPostRequest('trainer', 'trainers', trainerCreation);
   }
 
   getTrainer(trainerId: number): Observable<Trainer> {
