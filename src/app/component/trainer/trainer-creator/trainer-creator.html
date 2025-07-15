@@ -1,15 +1,18 @@
-<div>
-  <div>
-    <input #trainerCountInput type="number" min="0">
+<div class="container">
+  <div class="inputs">
+    <h2>How many Trainers do you want to create?</h2>
+    <input #trainerCountInput type="number" [defaultValue]="0" min="0">
     <button (click)="createTrainers(Number(trainerCountInput.value))">Create Trainers</button>
+    @if (createdTrainers.length != 0) {
+      <button (click)="downloadZIPedQrCodes()">Download All</button>
+    }
   </div>
   @if (createdTrainers.length != 0) {
-    <button (click)="downloadZIPedQrCodes()">Download All</button>
-    @for (createdTrainer of createdTrainers; track createdTrainer.id) {
-      <created-trainer [trainer]="createdTrainer"
-                       (qrCodeDownloadUrlEmitter)="handleQrCodeDownloadUrl($event)"></created-trainer>
-    }
+    <div class="trainerContainer">
+      @for (createdTrainer of createdTrainers; track createdTrainer.id) {
+        <created-trainer [trainer]="createdTrainer"
+                         (qrCodeDownloadUrlEmitter)="handleQrCodeDownloadUrl($event)"></created-trainer>
+      }
+    </div>
   }
-
-
 </div>

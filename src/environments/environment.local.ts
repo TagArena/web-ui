@@ -1,6 +1,6 @@
 export const environment = {
-  baseDomain: "roboter5123.com",
+  baseDomain: "tagarena.win",
   httpProtocol: "https",
-  servicePrefix: "tagarena.dev",
+  servicePrefix: "dev",
   adminPassword: "12345"
 };

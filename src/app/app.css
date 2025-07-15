@@ -3,6 +3,12 @@
   flex-direction: column;
   min-height: 100vh; /* Ensures at least 1 screen height */
 }
+app-page-header{
+  position: sticky;
+  top: 0;
+  z-index: 1000
+}
+
 
 .content {
   flex: 1;

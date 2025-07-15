@@ -1,5 +1,9 @@
 footer{
+  margin-top: 10px;
   min-height: 200px;
-  background: var(--tertiary-color);
+  background: var(--primary-color);
   border-top: var(--secondary-color) solid 1px;
+}
+footer *{
+  color: var(--primary-text-color);
 }

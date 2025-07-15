@@ -1,18 +1,33 @@
 .trainerContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid black;
-  background: antiquewhite;
-  width: fit-content;
+  background: var(--secondary-color);
+  display: grid;
   padding: 10px;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: stretch;
+  gap: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.trainerContainer * {
+  color: var(--secondary-text-color);
+}
+
+button {
+  background: var(--accent-color);
+  cursor: pointer;
+  padding: 0;
   border-radius: 10px;
 }
 
-.downloadButton {
-  padding: 0;
+button * {
+  color: var(--accent-text-color);
 }
 
-.downloadUrl {
-  padding: 0 2px;
+button a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

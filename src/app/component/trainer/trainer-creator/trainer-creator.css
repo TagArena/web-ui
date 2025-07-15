@@ -1,0 +1,49 @@
+.container {
+  background: var(--primary-color);
+  width: fit-content;
+  min-height: 200px;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.container *{
+  color: var(--primary-text-color);
+}
+.inputs{
+  background: var(--secondary-color);
+  border-radius: 10px;
+  padding: 10px
+
+}
+
+.inputs > button {
+  background: var(--accent-color);
+  border-radius: 5px;
+}
+
+.inputs button {
+  color: var(--accent-text-color);
+}
+
+.trainerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 20px;
+}
+
+/* Ensure all trainer cards look the same size */
+.trainerContainer > created-trainer {
+  display: block;
+  width: 100%;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+h2{
+  margin: 5px 0;
+}

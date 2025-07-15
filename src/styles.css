@@ -1,23 +1,31 @@
 :root {
-  --primary-color: #77BEF0;
-  --secondary-color: #FFCB61;
-  --tertiary-color: #FF894F;
-  --accent-color: #EA5B6F;
-  --text-color: #000;
+  --background-color: #3D74B6;
+  --primary-color: #FBF5DE;
+  --secondary-color: #EAC8A6;
+  --accent-color: #DC3C22;
+
+  --default-text-color: #fff;
+  --primary-text-color: #000;
+  --secondary-text-color: #fff;
+  --accent-text-color: #fff;
 }
 
 *{
   box-sizing: border-box;
-  color: var(--text-color);
+  color: var(--default-text-color);
 }
+
 html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: var(--primary-color);
+  background: var(--background-color);
 }
 
 .page{
   flex-grow: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
