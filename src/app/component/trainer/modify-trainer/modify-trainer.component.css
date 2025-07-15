@@ -1,0 +1,23 @@
+.componentContainer{
+  background: var(--secondary-color);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.componentContainer *:not(input) {
+  color: var(--secondary-text-color);
+}
+
+h2{
+  margin-top: 2px;
+}
+
+.closeButton{
+  cursor: pointer;
+  height: fit-content;
+  text-align: right;
+}
+
+input{
+  color: #000;
+}

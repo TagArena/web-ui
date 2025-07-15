@@ -1,0 +1,7 @@
+<div class="pageContainer">
+  @if (trainer === undefined) {
+    <app-trainer-pass-scanner (trainerEmitter)="handleTrainerScanSuccess($event)"></app-trainer-pass-scanner>
+  } @else {
+    <app-modify-trainer (close)="closeModifyTrainer()" [trainer]="trainer"></app-modify-trainer>
+  }
+</div>

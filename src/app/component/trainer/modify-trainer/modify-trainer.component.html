@@ -1,0 +1,16 @@
+<div class="componentContainer">
+  @if (!trainerUpdated) {
+    <div class="closeButton" (click)="emitCloseEvent()">X</div>
+    <h2>Modify your trainer</h2>
+    <form>
+      <Label>
+        Name:
+        <input [(ngModel)]="trainer().name" name="name">
+      </Label>
+      <button (click)="sendTrainerUpdates(trainer())">Submit</button>
+    </form>
+  } @else {
+    <div>Your data was updated!</div>
+  }
+</div>
+

@@ -27,10 +27,9 @@ export class PageHeaderComponent {
       route = '';
     }else if (page == 'CREATE_TRAINERS') {
       route = '/create/trainers';
-
-    } else if (page == 'SCAN_TRAINERS') {
-      route = '/read/trainers';
-    } else {
+    }  else if (page == 'MODIFY_TRAINERS') {
+      route = '/modify/trainers';
+    }else {
       return;
     }
     this.router.navigate([route])

@@ -20,4 +20,8 @@ export class TrainerService {
   getTrainer(trainerId: number): Observable<Trainer> {
     return this.httpService.sendGetRequest('trainer', 'trainers', String(trainerId));
   }
+
+  updateTrainer(trainerId:number, trainer: Trainer) : Observable<Trainer>{
+    return this.httpService.sendPutRequest('trainer', 'trainers/' + trainerId, trainer)
+  }
 }
