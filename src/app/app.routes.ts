@@ -18,7 +18,7 @@ export const routes: Routes = [
     component: ScanTrainerPassPage
   },
   {
-    path: 'modify/trainer',
+    path: 'modify/trainers',
     component: ModifyTrainerPage
   }
 
