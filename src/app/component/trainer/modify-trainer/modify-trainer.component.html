@@ -7,8 +7,15 @@
         Name:
         <input [(ngModel)]="trainer().name" name="name">
       </Label>
-      <button (click)="sendTrainerUpdates(trainer())">Submit</button>
+      <div class="starterCreatures">
+        @for (starterCreature of starterCreatures; track starterCreature.id) {
+          <app-creature-frame (click)="selectCreature(starterCreature)" [creature]="starterCreature" [ngClass]="selectedCreature == starterCreature ? 'selected': ''"></app-creature-frame>
+        }
+      </div>
+      <button (click)="sendTrainerUpdates()">Submit</button>
     </form>
+
+
   } @else {
     <div>Your data was updated!</div>
   }

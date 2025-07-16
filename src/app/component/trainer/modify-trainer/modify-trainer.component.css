@@ -1,23 +1,48 @@
-.componentContainer{
+.componentContainer {
   background: var(--secondary-color);
   padding: 10px;
   border-radius: 10px;
+  width: 100%;
 }
 
 .componentContainer *:not(input) {
   color: var(--secondary-text-color);
 }
 
-h2{
+h2 {
   margin-top: 2px;
 }
 
-.closeButton{
+.closeButton {
   cursor: pointer;
   height: fit-content;
   text-align: right;
 }
 
-input{
+input {
   color: #000;
 }
+
+.starterCreatures {
+  background: var(--primary-color);
+  width: 100%;
+  display: grid;
+  padding: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 1rem;
+  grid-row-gap: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+app-creature-frame{
+  border: #fff 5px solid;
+}
+
+.selected{
+
+  border: var(--accent-color) 5px solid;
+}
+
