@@ -8,6 +8,7 @@
         <input [(ngModel)]="trainer().name" name="name">
       </Label>
       <div class="starterCreatures">
+        <div (click)="selectCreature(undefined)" [ngClass]="selectedCreature == undefined ? 'selected': ''"></div>
         @for (starterCreature of starterCreatures; track starterCreature.id) {
           <app-creature-frame (click)="selectCreature(starterCreature)" [creature]="starterCreature" [ngClass]="selectedCreature == starterCreature ? 'selected': ''"></app-creature-frame>
         }

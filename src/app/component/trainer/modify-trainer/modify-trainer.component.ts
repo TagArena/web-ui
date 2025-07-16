@@ -55,7 +55,7 @@ export class ModifyTrainerComponent implements OnInit {
     }
   }
 
-  selectCreature(starterCreature: Creature) {
+  selectCreature(starterCreature: Creature | undefined) {
     this.selectedCreature = starterCreature
   }
 }

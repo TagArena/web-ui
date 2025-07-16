@@ -28,17 +28,23 @@ input {
   width: 100%;
   display: grid;
   padding: 10px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 1rem;
-  grid-row-gap: 0;
+  grid-row-gap: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   cursor: pointer;
 }
 
-app-creature-frame{
+.starterCreatures > *{
+
+  background: white;
+}
+
+.starterCreatures > *:not(.selected){
   border: #fff 5px solid;
+
 }
 
 .selected{
